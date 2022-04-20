@@ -1,0 +1,123 @@
+body {
+
+    background: rgb(231, 231, 231);
+}
+body, button, input {
+    font-family: monospace;
+}
+ul {
+    list-style-type: none;
+    padding: 10px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+li {
+    margin: 10px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center
+}
+.deletebtn  {
+    margin: 0 0 0 10px;
+}
+/* .wrapper {
+    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 0;
+    height: 100%;
+    max-width: 500px;
+    min-width: 225px;
+    width: 100%;
+} */
+.ultodos {
+    
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+li {
+    list-style: none;
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    background: rgb(190, 190, 190);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+}
+ li:hover {
+    background: rgb(180, 179, 179);
+}
+.wrapper header {
+    font-size: 45px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .wrapper header:hover{
+    transform: scale(1.1);
+    }
+.wrapper .inputField {
+    
+    display:flex;
+    height: 45px;
+    width: 100%;
+    border-radius: none;
+    justify-content: space-between;
+    filter: drop-shadow(0 0 3px #555);
+}
+.wrapper .inputField input{
+    width: 100%;
+    border: none;
+    padding-left: 15px;
+    border-radius: 8px 0 0 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.wrapper .inputField button{
+    width: 50px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background: #55c49f;
+    opacity: 100%;
+}
+.wrapper .inputField button:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+.wrapper{
+    margin: 50px auto;
+    max-width: 500px;
+    width: 100%;
+    background: rgb(235, 232, 232);
+    border-radius: 10px;
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    filter: drop-shadow(0 0 10px #555);
+    border-top: 10px solid #55c49f;
+    }
+
+.clockpage {
+  margin: auto;
+  max-width: 500px;
+  min-width: 100px;
+  background: white;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 32px;
+  padding: 10px;
+  font-weight: bold;
+  border-top: 10px solid #55c49f;
+  margin-top: 100px;
+}
+#dayOfWeek {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+}
+.todo {
+    overflow-wrap: break-word;
+}
