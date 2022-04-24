@@ -7,31 +7,39 @@ function Todo() {
     if (value.value != ""){    
         let todo = document.createElement('li');
         let del = document.createElement('button');
-        del.innerText = 'delete';
-        del.setAttribute("id", "del");
+        let delicon = document.createElement('i');
+            delicon.setAttribute("class", "fa fa-ban");
+            del.setAttribute("id", "del");
+            del.setAttribute("class", "delbtn");
         let edit = document.createElement('button');
-        edit.setAttribute("id", "edit");
-
-        edit.innerText = 'edit';
+        let editicon = document.createElement('i');
+            editicon.setAttribute("class", "fa fa-pencil-square-o");
+            edit.setAttribute("id", "edit");
+            edit.setAttribute("class", "editbtn");
         let done = document.createElement('button');
-        done.innerText = 'done';
-        todo.setAttribute('class', "todo");
+        let doneicon = document.createElement('i');
+            doneicon.setAttribute("class", "fa fa-check");
+            done.setAttribute("class", "donebtn");
+            todo.setAttribute('class', "todo");
         todo.innerHTML = value.value;
-        todos.append(todo);
+            todos.append(todo);
         value.value = '';
-        todo.append(edit);
-        todo.append(del);
-        todo.prepend(done);
+            todo.append(edit);
+            todo.append(del);
+            todo.prepend(done);
+            done.append(doneicon);
+            edit.append(editicon);
+            del.append(delicon);
         edit.addEventListener('click', function edit(){
             let save = document.createElement('button');
-            save.setAttribute("id", "save");
+                save.setAttribute("id", "save");
             let editinput = document.createElement('input');
-            editinput.setAttribute("id", "editinput");
+                editinput.setAttribute("id", "editinput");
             editinput.type = 'text';
             save.innerText = 'save';
-            todo.append(save);
+                todo.append(save);
             let inputval = todo.childNodes[1].textContent;
-            todo.append(editinput);
+                todo.append(editinput);
             editinput.value = inputval;
             todo.children.edit.style.display = 'none';
             todo.children.del.style.display = 'none';
@@ -39,23 +47,20 @@ function Todo() {
                     todo.childNodes[1].textContent = editinput.value;
                     todo.children.save.remove();
                     todo.children.editinput.remove();
-                    todo.children.edit.style.display = 'block';
-                    todo.children.del.style.display = 'block';
-                    // todo.append(edit);
-                    // todo.append(del);
-                    // todo.append(edit);
+                    todo.children.edit.style.display = 'inline-block';
+                    todo.children.del.style.display = 'inline-block';
                 })
         })
-
         del.addEventListener('click', function del(){
             todos.removeChild(todo);
         })
             done.addEventListener('click', function h(){
                 let val = todo.childNodes[1].textContent;
                 let historytodo = document.createElement('li');
+                    historytodo.setAttribute("class", "historyli");
                     historytodo.innerHTML = val;
-                    history.prepend(historytodo);
-                    todos.removeChild(todo);
+                        history.prepend(historytodo);
+                        todos.removeChild(todo);
             })
             del.addEventListener('click', function h(){
                 

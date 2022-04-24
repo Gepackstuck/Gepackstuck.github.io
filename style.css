@@ -1,5 +1,4 @@
 body {
-
     background: rgb(231, 231, 231);
 }
 body, button, input {
@@ -8,39 +7,30 @@ body, button, input {
 ul {
     list-style-type: none;
     padding: 10px;
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-li {
-    margin: 10px;
-    height: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center
 }
 .deletebtn  {
     margin: 0 0 0 10px;
 }
 .ultodos {
-    
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-
 }
 li {
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: center;
     list-style: none;
     position: relative;
     height: 45px;
     line-height: 45px;
-    background: rgb(190, 190, 190);
+    background: #d6d6d6;
     border-radius: 10px;
     margin-bottom: 8px;
-    padding: 0 15px;
+
 }
  li:hover {
-    background: rgb(180, 179, 179);
+    background: #d1d1d1;
 }
 .wrapper header {
     font-size: 45px;
@@ -108,9 +98,44 @@ li {
   font-weight: normal;
   font-size: 18px;
 }
-.todo {
-    overflow-wrap: break-word;
-}
 .delall {
     margin: 15px 0 0 20px ;
+}
+.delbtn {
+    height: 45px;
+    width: 50px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background: #ff5462;
+    opacity: 100%;
+    position: absolute;
+    right: 0;
+    padding: 0;
+}
+.editbtn {
+    height: 45px;
+    width: 50px;
+    border: none;
+    /* border-radius: 0 0 0 0; */
+    background: #cecece;
+    opacity: 100%;
+    padding: 0;
+    position: absolute;
+    right: 53px;
+}
+.donebtn {
+    height: 45px;
+    width: 50px;
+    border: none;
+    border-radius: 10px 0 0  10px;
+    background: #55c49f;
+    opacity: 100%;
+    padding: 0;
+    margin-right: 20px;
+}
+.delbtn:hover, .editbtn:hover, .donebtn:hover {
+    cursor: pointer;
+}
+.historyli {
+    padding-left: 30px;
 }
