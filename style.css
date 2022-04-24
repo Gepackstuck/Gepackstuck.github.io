@@ -165,6 +165,7 @@ li {
     height: 100%;
     width: 78%;
 }
+/* Кнопка удалить для выполненного */
 .delhist {
     margin-left: 15px;
 }
