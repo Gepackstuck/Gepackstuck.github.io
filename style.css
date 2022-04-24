@@ -138,4 +138,9 @@ li {
 }
 .historyli {
     padding-left: 30px;
+    background: #55c49f;
+    opacity: 30%;
+}
+.history {
+    margin-top: 0px;
 }
