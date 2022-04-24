@@ -3,6 +3,19 @@ let value = document.getElementById('value'),
     todos = document.getElementById('ultodos'),
     delall = document.getElementById('delall'),
     history = document.getElementById('history');
+//LocalStorage
+    let todolist = document.querySelectorAll('ul');
+let localtodos;
+let localhistory;
+//LocalStorage
+// function todoLocal() {
+//     localtodos=todolist[0].innerHTML;
+//     localStorage.setItem("localtodos", localtodos);
+// }
+function todoHistory() {
+    localhistory=todolist[1].innerHTML;
+    localStorage.setItem("localhistory", localhistory);
+}
 function Todo() {
     if (value.value != ""){    
         let todo = document.createElement('li');
@@ -30,16 +43,22 @@ function Todo() {
             done.append(doneicon);
             edit.append(editicon);
             del.append(delicon);
+            
         edit.addEventListener('click', function edit(){
             let save = document.createElement('button');
                 save.setAttribute("id", "save");
+                save.setAttribute("class", "savebtn");
+            let saveicon = document.createElement('i');
+                saveicon.setAttribute("class", "fa fa-floppy-o");
             let editinput = document.createElement('input');
                 editinput.setAttribute("id", "editinput");
+                editinput.setAttribute("class", "editinput");
             editinput.type = 'text';
-            save.innerText = 'save';
-                todo.append(save);
+               todo.append(editinput);
+               todo.append(save);
+               save.append(saveicon);
             let inputval = todo.childNodes[1].textContent;
-                todo.append(editinput);
+                
             editinput.value = inputval;
             todo.children.edit.style.display = 'none';
             todo.children.del.style.display = 'none';
@@ -49,10 +68,13 @@ function Todo() {
                     todo.children.editinput.remove();
                     todo.children.edit.style.display = 'inline-block';
                     todo.children.del.style.display = 'inline-block';
+                    
                 })
+                editinput.focus();
         })
         del.addEventListener('click', function del(){
             todos.removeChild(todo);
+            
         })
             done.addEventListener('click', function h(){
                 let val = todo.childNodes[1].textContent;
@@ -61,17 +83,19 @@ function Todo() {
                     historytodo.innerHTML = val;
                         history.prepend(historytodo);
                         todos.removeChild(todo);
-            })
-            del.addEventListener('click', function h(){
-                
+                        todoHistory();
+                        
             })
         if (todos.querySelectorAll('li').length != 0) {
             document.getElementById('delall').disabled = false;
         } else {
             document.getElementById('delall').disabled = true;
         }
+        
     }  
+    
 }
+
 // Delete element
 delall.addEventListener('click', function delall(){
     let que = confirm ('Точно?');
@@ -79,8 +103,10 @@ delall.addEventListener('click', function delall(){
         if (que === true){
             for (let i = todolength; i >= 1; i--){
             document.querySelector("#ultodos > li:nth-child("+ i +")").remove();
+            
             }
         }
+
 })
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -106,3 +132,10 @@ function d() {
     let day = document.getElementById("dayOfWeek");
         day.innerHTML = dayOfWeek[days];
 }
+//LocalStorage
+// if(localStorage.getItem("localtodos")) {
+//     todolist[0].innerHTML = localStorage.getItem("localtodos");
+// }
+// if(localStorage.getItem("localhistory")) {
+//     todolist[1].innerHTML = localStorage.getItem("localhistory");
+// }

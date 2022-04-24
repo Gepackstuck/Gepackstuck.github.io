@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/todo — копия/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="clockTimer(); d();">
@@ -15,7 +15,7 @@
             <input id="value" placeholder="Введите" value="" autocomplete="off">
             <button id="btn" onclick='Todo()' > <i class="fa fa-plus"></i></button>
         </div>
-            <p>(Можно добавлять Enter'ом)</p>
+            <p>Можно добавлять Enter'ом<br><s>работает LocalStorage <br>Drag&Drop</s></p>
         <div>
             <ul id="ultodos" class="ultodos">
 
@@ -23,12 +23,12 @@
             <button id="delall" class="delall">Очистить</button>
         </div>
         <div>
-            <h3>Выполненные <i class="fa fa-check"></i></h3>
-            <ul id="history">
+            <h3 style="margin-bottom: 0px;">Выполненные <i class="fa fa-check"></i><button id="delhist" class="delhist">Очистить</button></h3>
+            <ul id="history" class="history">
             
             </ul>
         </div>
 </div>
-	<script src="/script.js"></script>
+	<script src="/todo — копия/script.js"></script>
 </body>
 </html>

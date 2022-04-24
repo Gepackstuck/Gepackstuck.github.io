@@ -133,7 +133,7 @@ li {
     padding: 0;
     margin-right: 20px;
 }
-.delbtn:hover, .editbtn:hover, .donebtn:hover {
+.delbtn:hover, .editbtn:hover, .donebtn:hover, .savebtn:hover {
     cursor: pointer;
 }
 .historyli {
@@ -143,4 +143,28 @@ li {
 }
 .history {
     margin-top: 0px;
+}
+.savebtn {
+    height: 45px;
+    width: 50px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background: #54ff87;
+    opacity: 100%;
+    position: absolute;
+    right: 0;
+    padding: 0;
+}
+.editinput {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin-right: 50px;
+    /* margin-top: 15px; */
+    border: none;
+    height: 100%;
+    width: 78%;
+}
+.delhist {
+    margin-left: 15px;
 }
