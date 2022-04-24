@@ -22,16 +22,6 @@ li {
 .deletebtn  {
     margin: 0 0 0 10px;
 }
-/* .wrapper {
-    
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 0;
-    height: 100%;
-    max-width: 500px;
-    min-width: 225px;
-    width: 100%;
-} */
 .ultodos {
     
     padding-top: 0px;
@@ -89,7 +79,7 @@ li {
     cursor: pointer;
 }
 .wrapper{
-    margin: 50px auto;
+    margin: 20px auto;
     max-width: 500px;
     width: 100%;
     background: rgb(235, 232, 232);
@@ -120,4 +110,7 @@ li {
 }
 .todo {
     overflow-wrap: break-word;
+}
+.delall {
+    margin: 15px 0 0 20px ;
 }

@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/todo/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-<body onload="clockTimer();">
-	
-<div class="wrapper">
+<body onload="clockTimer(); d();">
+	<div class="wrapper">
     <a id="time"></a>
     <a id="dayOfWeek"></a>
-    <header class="header" id="header"> <i class="fa fa-code"></i> TODOList
-        </header>
-    
+    <header class="header" id="header"> <i class="fa fa-code"></i> TODOList</header>
         <div class="inputField">
             <input id="value" placeholder="Введите" value="" autocomplete="off">
             <button id="btn" onclick='Todo()' > <i class="fa fa-plus"></i></button>
-        
         </div>
             <p>(Можно добавлять Enter'ом)</p>
         <div>
             <ul id="ultodos" class="ultodos">
 
             </ul>
-            <button id="delall">Очистить</button>
+            <button id="delall" class="delall">Очистить</button>
         </div>
-
         <div>
             <h3>Выполненные</h3>
             <ul id="history">
             
             </ul>
         </div>
-
 </div>
-	<script src="/script.js"></script>
+	<script src="/todo/script.js"></script>
 </body>
-
 </html>
