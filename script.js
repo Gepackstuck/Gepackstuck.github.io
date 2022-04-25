@@ -136,6 +136,6 @@ function d() {
 // if(localStorage.getItem("localtodos")) {
 //     todolist[0].innerHTML = localStorage.getItem("localtodos");
 // }
-// if(localStorage.getItem("localhistory")) {
-//     todolist[1].innerHTML = localStorage.getItem("localhistory");
-// }
+if(localStorage.getItem("localhistory")) {
+    todolist[1].innerHTML = localStorage.getItem("localhistory");
+}
